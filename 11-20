@@ -1,0 +1,50 @@
+11.CSS选择器
+原生选择器（用HTML标签申明）；id选择器；类选择器；属性选择器；后代选择器；群组选择器；queryselector;
+
+12.rgba()和opacity的透明效果的不同
+rgba()和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，而rgba()只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+
+13. Normalize.css 和 base.css
+保留有用的默认值，不同于许多 CSS 的重置；标准化的样式，适用范围广的元素。；纠正错误和常见的浏览器的不一致性。；一些细微的改进，提高了易用性。；使用详细的注释来解释代码。因为浏览器兼容问题，不同的浏览器对标签的默认样式值不同，如果不初始化会造成不同浏览器之间显示有差距；说白了就是初始化css
+
+14.Sass 和 Less
+他们是CSS预处理器。他是CSS上的一种抽象层。他们是一种特殊的语法/语言编译成CSS。例如Less是一种动态样式语言. 将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。
+
+15.display:none 和 visibility:hidden 的区别
+display:none是隐藏对应的元素但不挤占该元素原来的空间（看不见但是占位置）；visibility:hidden是隐藏对应的元素并且挤占该元素原来的空间（看不见也不占位置）。
+
+16.IE盒模型跟W3C盒模型
+IE盒模型的width只计算到内容部分内边距（padding）外边距（margin）边框（border）都不计算在内。W3C盒模型将边框以内的全部计入width外边距不计算在width
+
+17.BFC是什么
+BFC（块级格式化上下文），一个创建了新的BFC的盒子是独立布局的，盒子内元素的布局不会影响盒子外面的元素。在同一个BFC中的两个相邻的盒子在垂直方向发生margin重叠的问题；BFC是指浏览器中创建了一个独立的渲染区域，该区域内所有元素的布局不会影响到区域外元素的布局，这个渲染区域只对块级元素起作用
+
+18.HTML与XHTML——二者有什么区别？
+1. 所有的标记都必须要有一个相应的结束标记；
+2. 所有标签的元素和属性的名字都必须使用小写；
+3. 所有的 XML 标记都必须合理嵌套；
+4. 所有的属性必须用引号 "" 括起来；
+5. 把所有 < 和 & 特殊符号用编码表示；
+6. 给所有属性赋一个值；
+7. 不要在注释内容中使用 "--"；
+8. 图片必须有说明文字
+
+19.html常见兼容性问题？
+1.双边距BUG float引起的  使用display
+2.3像素问题 使用float引起的 使用dislpay:inline -3px  
+3.超链接hover 点击后失效  使用正确的书写顺序 link visited hover active
+4.Ie z-index问题 给父级添加position:relative
+5.Png 透明 使用js代码 改
+6.Min-height 最小高度 ！Important 解决’
+7.select 在ie6下遮盖 使用iframe嵌套
+8.为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）
+9.IE5-8不支持opacity，解决办法：
+.opacity {
+    opacity: 0.4
+    filter: alpha(opacity=60); /* for IE5-7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* for IE 8*/
+}
+10. IE6不支持PNG透明背景，解决办法: IE6下使用gif图片
+
+20.对WEB标准以及W3C的理解与认识
+标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性。
